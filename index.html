@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About Me</a></li>
+                <li><a href="#Social">Social Medias</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="Home" class="visible">
+            <div class="home-content">
+            <h1>Hello,</h1>
+            <p>This is the website I developed as part of the "Full Stack Web Development Bootcamp" that I attended via Techcarrer.net. </p>
+        </div>
+            
+        </section>
+        <section id="About">
+            <div class="photo-container">
+                <img src="./img/img.png" alt="">
+                </div>
+                <h1>Hello,</h1>
+                <p>My Name is Toykan Abuhanoglu</p>
+        </section>
+        <section id="Social">
+            <div class="card-container">
+                <div class="card">
+                    <p>Instagram</p>
+                    <a href="https://www.instagram.com/toykan_a/" target="_blank">
+                   <img src="./img/insta.jpg" alt="">
+                </a>
+                    </div>
+                    <div class="card">
+                        <p>Github</p>
+                        <a href="https://www.github.com/toykan18/" target="_blank">
+                       <img src="./img/github.png" alt="">
+                    </a>
+                        </div>
+                        <div class="card">
+                            <p>Linked in</p>
+                            <a href="https://www.linkedin.com/in/toykan-abuhanoglu-729346213/" target="_blank">
+                           <img src="./img/linkedin.png" alt="">
+                        </a>
+                            </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+    <footer>
+
+    </footer>  
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+     let homeSection = document.getElementById('Home');
+     let aboutSection = document.getElementById('About');
+     let socialSection = document.getElementById('Social');
+     let contactSection = document.getElementById('Contact');
+    window.addEventListener('scroll', function() {
+        let scrollPosition = window.scrollY;
+
+        if (scrollPosition < window.innerHeight) {
+            homeSection.classList.add('visible');
+            aboutSection.classList.remove('visible');
+            socialSection.classList.remove('visible');
+            contactSection.classList.remove('visible');
+        } else if (scrollPosition < window.innerHeight * 2) {
+            homeSection.classList.remove('visible');
+            aboutSection.classList.add('visible');
+            socialSection.classList.remove('visible');
+            contactSection.classList.remove('visible');
+        } else if (scrollPosition < window.innerHeight * 3) {
+            homeSection.classList.remove('visible');
+            aboutSection.classList.remove('visible');
+            socialSection.classList.add('visible');
+            contactSection.classList.remove('visible');
+        } else {
+            homeSection.classList.remove('visible');
+            aboutSection.classList.remove('visible');
+            socialSection.classList.remove('visible');
+            contactSection.classList.add('visible');
+        }
+    });
+});
+</script>
+
+
+</body>
+</html>

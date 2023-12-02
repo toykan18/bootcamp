@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1F2833;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: #45A29E; 
+    z-index: 1000;
+    top: 0;
+}
+
+.navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px; 
+}
+
+.navbar ul li {
+    display: inline;
+    font-weight: bold;
+    
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: backgroundcolor 0.3s ease-in-out;
+}
+.navbar ul li a:hover{
+    background-color: #1F2833;
+}
+
+main {
+    margin-top: 0px; 
+}
+
+section {
+    height: 109vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+#Home:not(.visible) + #About {
+    background-color: #3a4d63 ; /* veya istediğiniz başka bir renk */
+}
+#About:not(.visible) + #Social{
+    background-color: #557a8f  ;
+}
+.home-content{ 
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    font-size: 30px;
+    background-image: url("../img/bg.jpg");
+    background-size: cover;
+}
+.photo-container{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.photo-container img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+.card-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card{
+    width: 300px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+    background-color: white;
+    
+}
+.card img:hover{
+    transform: translateY(-10px);
+
+}
+
+
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
