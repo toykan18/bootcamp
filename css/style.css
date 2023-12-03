@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #1F2833;
+    background-color: #101010;
 }
 
 header {
@@ -54,11 +54,17 @@ section {
 }
 
 #Home:not(.visible) + #About {
-    background-color: #3a4d63 ; /* veya istediğiniz başka bir renk */
+    background-color:#000000 ;
 }
 #About:not(.visible) + #Social{
-    background-color: #557a8f  ;
+    background-color: #101010  ;
 }
+
+#Contact{
+    background-color: #1F2833;
+    color: white;
+}
+
 .home-content{ 
     padding: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -66,6 +72,11 @@ section {
     background-image: url("../img/bg.jpg");
     background-size: cover;
 }
+#About{
+    color: white;
+}
+
+
 .photo-container{
     text-align: center;
     margin-bottom: 20px;
@@ -97,7 +108,45 @@ section {
     transform: translateY(-10px);
 
 }
-
+.form-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    background-image: url(../img/form-bg.jpg);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    background-size: cover;
+    border-radius: 5px;
+    padding: 10px;
+}
+.form-group{
+    margin-bottom: 10px;
+}
+input[type="text"],
+input[type="email"],
+textarea{
+    width: calc(100% - 16px);
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    opacity:50%;
+}
+textarea{
+    resize: vertical;
+}
+button[type="submit"]{
+    padding: 20px, 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;;
+}
+button[type="submit"]:hover{
+    background-color: #555;
+    
+}
 
 
 .visible {
